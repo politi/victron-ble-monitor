@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 15,
-  "iteration": 1693563064895,
+  "iteration": 1697187593478,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -36,7 +36,7 @@
       },
       "id": 40,
       "options": {
-        "content": "<center>\n  <h1 style=\"font-size:3.0em; margin: 0; padding: 0; text-transform: capitalize;\">\n Victron {{data.[0].type}} {{data.[0].device}}\n    <div style=\"font-size:0.6em; font-style: italic; color: #666\">(Ultimo rilievo: {{date data.[0].Time 'DD/MM/YYYY HH:mm:ss'}})</div>\n\n  </h1>\n</center>",
+        "content": "<center>\n  <h1 style=\"font-size:3.0em; margin: 0; padding: 0; text-transform: capitalize;\">\n Victron {{data.[0].type}} {{data.[0].device}}\n    <div style=\"font-size:0.6em; font-style: italic; color: #666\">(Ultimo rilievo: {{date data.[0]._timestamp 'DD/MM/YYYY HH:mm:ss'}})</div>\n\n  </h1>\n</center>",
         "defaultContent": "No data yet",
         "everyRow": false
       },
@@ -1394,6 +1394,16 @@
           "$$hashKey": "object:410",
           "alias": "Battery voltage",
           "name": "battery_voltage"
+        },
+        {
+          "$$hashKey": "object:571",
+          "alias": "Time (measure)",
+          "name": "_timestamp"
+        },
+        {
+          "$$hashKey": "object:447",
+          "alias": "Time (save)",
+          "name": "Time"
         }
       ],
       "columnFiltersEnabled": false,
@@ -1487,7 +1497,7 @@
           },
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
-          "pattern": "Time",
+          "pattern": "_timestamp",
           "thresholds": [
             ""
           ],
@@ -1625,6 +1635,38 @@
           "thresholds": [],
           "type": "hidden",
           "unit": "short"
+        },
+        {
+          "$$hashKey": "object:425",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Time",
+          "splitPattern": "/ /",
+          "thresholds": [],
+          "type": "date",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:173",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "timestamp",
+          "splitPattern": "/ /",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
         }
       ],
       "targets": [
@@ -1739,8 +1781,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Victron SmartSolar 2",
+  "title": "Victron SmartSolar",
   "uid": "14Jl2U9Vk",
-  "version": 55,
+  "version": 65,
   "weekStart": ""
 }
