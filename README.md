@@ -540,7 +540,7 @@ When a new Raspberry is "connected" (via BLE) to a new Victron device, the new d
 
 ***<u>Import Dashboard</u>***  
 If you want to import the dashboard we created, please download it from here: ***[Victron dashboard](grafana/victron-dashboard.json)***    
-**TODO: Replace with Github link**.  
+
 
 And follow the instructions found here: [Import dashboard](https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#import-a-dashboard)
 
