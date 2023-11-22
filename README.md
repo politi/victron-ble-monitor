@@ -362,15 +362,10 @@ sqlite3 ~/.local/share/Victron\ Energy/Victron\ Connect/d25b6546b47ebb21a04ff86a
 
 
 For our needs we generated a schedule script with the following characteristics:
-- start at 00:00
+- start at 23:58
 - 2 minutes ON
 - 18 minutes OFF (20 miutes cycle)
-- repeat the pattern for 60 times (until 20:00)
-- 58 minutes ON
-- 2 minutes OFF
-- 2 minutes ON
-- 18 minutes OFF
-- repeat the last ON/OFF pattern for 9 times (up to 23:59)
+- repeat the ON/OFF pattern for 72 times (until 23:59:59)
 
 This is an extract of the generated script
 ```bash
@@ -380,14 +375,7 @@ ON    M2
 OFF   M18
 ON    M2
 OFF   M18
-... # last two lines repeated 58 more times
-ON    M58
-OFF   M2
-ON    M2
-OFF   M18
-ON    M2
-OFF   M18
-... # last two lines repeated 6 more times
+... # last two lines repeated 70 more times
 ```
 
 The complete script is stored in file `/opt/wittypi/wittipy/schedules/victron-monitor.wpi`
