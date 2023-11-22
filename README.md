@@ -374,8 +374,8 @@ For our needs we generated a schedule script with the following characteristics:
 
 This is an extract of the generated script
 ```bash
-BEGIN 2023-08-01 00:00:00
-END   2043-12-31 23:45:00
+BEGIN 2023-08-01 23:58:00
+END   2035-07-31 23:59:59
 ON    M2
 OFF   M18
 ON    M2
